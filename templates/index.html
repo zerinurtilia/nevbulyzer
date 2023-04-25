@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="{{ url_for('static', filename='img/orbit_logo.jpg') }}" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlfaNevbulyzer</title>
+  <!-- Materialize css plugin -->
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="static/style.css">
+  <!-- Impor Font google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Animate CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <!-- Aos  -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+  <!-- expand_less -->
+  <a id="button" class="material-icons exp">expand_less</a>
+  <!-- Navbar -->
+  <section id="Navbar">
+    <div class="navbar-fixed ">
+      <nav class="navbar">
+        <div class="nav-wrapper container">
+          <a href="{{ url_for('index') }}"class="brand-logo">NevBulyzer</a>
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <div class="brand-logo center">
+            <ul class="hide-on-med-and-down ">
+              <li><a class="navres" href="#Hero {{ url_for('index') }}">Dashboard</a></li>
+              <li><a class="navres" href="{{ url_for('info') }}">Information</a></li>
+              <li><a class="navres" href="#Kontak">Kontak</a></li>
+            </ul>
+          </div>
+          <ul class="right hide-on-med-and-down">
+            <li><a class="navres waves-effect waves-light btn" href="https://www.bing.com/ck/a?!&&p=267fb6dd78f38626JmltdHM9MTY3MDExMjAwMCZpZ3VpZD0zZjgwNjAxMi02MTUxLTY4NzYtMGY2OS03MTc1NjA2NDY5ZmYmaW5zaWQ9NTE2OA&ptn=3&hsh=3&fclid=3f806012-6151-6876-0f69-7175606469ff&psq=ORBIT+VENTURAN&u=a1aHR0cHM6Ly9vcmJpdGZ1dHVyZWFjYWRlbXkuaWQv&ntb=1">ORBIT Future Academy</a></li>
+          </ul>
+        </div>
+    </div>
+
+    </nav>
+
+    <ul class="sidenav" id="mobile-nav">
+      <li><a href="#Hero {{ url_for('index') }}">Dashboard</a></li>
+      <li><a href="{{ url_for('info') }}">Information</a></li>
+      <li><a href="#Kontak">Kontak</a></li>
+      <li><a class="waves-effect waves-light btn" href="https://www.bing.com/ck/a?!&&p=267fb6dd78f38626JmltdHM9MTY3MDExMjAwMCZpZ3VpZD0zZjgwNjAxMi02MTUxLTY4NzYtMGY2OS03MTc1NjA2NDY5ZmYmaW5zaWQ9NTE2OA&ptn=3&hsh=3&fclid=3f806012-6151-6876-0f69-7175606469ff&psq=ORBIT+VENTURAN&u=a1aHR0cHM6Ly9vcmJpdGZ1dHVyZWFjYWRlbXkuaWQv&ntb=1">ORBIT Future Academy</a></li>
+    </ul>
+  </section>
+  <!-- End Navbar -->
+  <!-- Hero -->
+  <section id="Hero">
+    <div class="container animate__animated animate__fadeInDown">
+      <div class="section">
+        <div class="row">
+          <div class="col s12 m6 t1"><span class="flow-text"><img src="static/img/LogoN.png" alt="Cyberbullying"
+                class="t1"></span></div>
+          <div class="col s12 m6 t2"><span class="flow-text jweb">Mengenai Web</span>
+            <p class="dweb">
+              Website ini ditujukan kepada masyarakat (User) 
+              yang ingin mengetahui mengenai cyberbulying pada Media Sosial, serta melakukan analisis kecenderungan pendapat warganet terhadap suati kasus yang sedanng hype. 
+              Dengan adanya website ini diharapkan dapat membantu menganalisis apakah kalimat yang diujarkan oleh pengguna media sosial tertentu , misalnya twetter masuk
+              ke <i>Hate Speech dan Abusive Language</i> atau tidak. 
+              </p>
+            <p>Anda dapat memulai Prediction dengan menekan tombol di bawah ini</p>
+
+            <a class="navres waves-effect waves-light btn about" href="{{ url_for('analisis') }}">Start Prediction<i
+                class="small material-icons panah"> arrow_forward</i>
+            </a>
+            <div class="sosmedJudul">
+              <p class="sosmed"></p>
+              <p> Sosial Media</p>
+            </div>
+            <div class="sosmedIcon">
+              <a><img src="static/img/instagram.png" alt="instagram" class="sosgbr" ></a>
+              <a><img src="static/img/facebook.png" alt="facebook" class="sosgbr"></a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
+  
+  <!-- Kontak -->
+  <section id="Kontak">
+    <footer class="container" >
+      <div class="row">
+        <div class="col s12 m6 l6">
+          <h2 class="jkontak">
+            Kontak
+          </h2>
+          <P class="garis"></P>
+          <p class="ket">
+            Anda bisa menghubungi Kami melalui<span class="ketbwh">
+              email yang tersedia dibawah ini :</span>
+          </p>
+          <div class="gkontak">
+            <img src="static/img/Mail.png" alt="Mail Logo" class="lemail">
+            <div class="ekontak">
+              <p> Email
+              </p>
+              <p>
+                nevbulyzer@gmail.com
+              </p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col s12 m6 l6">
+          <p class="skontak">“Berikan pesan kepada Kami
+            agar Kami dapat berinteraksi
+            dengan anda sekaligus belajar banyak hal dengan anda.” </p>
+
+        </div>
+
+
+      </div>
+      <div class="footer-copyright">
+        <center>
+          @Made by AlfaNevbulyzer Team
+        </center>
+      </div>
+    </footer>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="static/app.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
